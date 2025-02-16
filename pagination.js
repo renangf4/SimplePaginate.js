@@ -100,23 +100,24 @@ function generatePagination(elementPagination, elements, paged, btnPrevText, btn
         if( group != 1 ) {
             elemPagination.show(0);
             
+            let paginationContent = $('<div class="numbers"></div>');
+            
             for (var i = 1; i <= group; i++) {
                 let classActive = i == 1 ? 'active' : '';
                 
-                
                 if( i == group ) {
-                    // console.log(i, group);
-                    elemPagination.append('<span class="number-last" style="display: none;">...</span>')
+                    paginationContent.append('<span class="number-last" style="display: none;">...</span>');
                 }
                 
-                elemPagination.append(`<button class="number ${classActive}" data-pagination="${i}">${i}</button>`);
+                paginationContent.append(`<button class="number ${classActive}" data-pagination="${i}">${i}</button>`);
                 
                 if( i == 1 ) {
-                    elemPagination.append('<span class="number-first" style="display: none;">...</span>')
+                    paginationContent.append('<span class="number-first" style="display: none;">...</span>');
                 }
             }
             
             elemPagination.prepend(`<button class="prev" disabled>${btnPrevText}</button>`);
+            elemPagination.append(paginationContent);
             elemPagination.append(`<button class="next">${btnNextText}</button>`);
 
             verifyPagination();
