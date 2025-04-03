@@ -1,30 +1,30 @@
-# SimplePaginate.js
+# SimplePaginate.js  
+A simple pagination script using jQuery.  
 
-Um simples script de paginação usando jQuery.
-
-## 🚀 Como Usar
-
-Inclua o `pagination.js` no seu projeto:
+## 🚀 How to Use  
+Include `pagination.js` in your project:  
 
 ```html
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="pagination.js"></script>
 ```
 
-### 📌 Exemplo de Uso  
+## 📌 Example Usage  
+Call the function in your code:  
 
-Chame a função no seu código:
-
-```javascript
+```js
 generatePagination('.js-pagination', '.js-pagination-item', 12, 'Prev', 'Next');
 ```
 
-### 📖 Parâmetros:
-**`.js-pagination`** → Seletor do contêiner da paginação.
-**`.js-pagination-item`** → Seletor dos itens que serão paginados.
-**`12`** → Número de itens por página.
-**`'Prev'` / `'Next'`** → Texto dos botões de navegação.
+## 📖 Parameters  
+- **`.js-pagination`** → Selector for the pagination container.  
+- **`.js-pagination-item`** → Selector for the items to be paginated.  
+- **`12`** → Number of items per page.  
+- **`'Prev' / 'Next'`** → Text for navigation buttons.  
 
-## 📄 Licença  
+## 🌐 Live Demo  
+Check out the live demo here:  
+🔗 [SimplePaginate.js Demo](https://your-username.github.io/SimplePaginate.js/)
 
-Este projeto está licenciado sob a licença **MIT**.
+## 📄 License  
+This project is licensed under the MIT License.  

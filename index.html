@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +13,17 @@
 <body>
 
     <div class="container mt-5">
-        <h2 class="text-center mb-4">SimplePaginate.js - Exemplo com Cards</h2>
+        <h2 class="text-center mb-4">SimplePaginate.js - Card Example</h2>
 
-        <div class="row js-pagination">
+        <div class="row">
             <script>
-                for (let i = 1; i <= 15; i++) {
+                for (let i = 1; i <= 30; i++) {
                     document.write(`
                         <div class="col-md-4 mb-4 js-pagination-item">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Item ${i}</h5>
-                                    <p class="card-text">Este é o conteúdo do item ${i}.</p>
+                                    <p class="card-text">This is the content of item ${i}.</p>
                                 </div>
                             </div>
                         </div>
@@ -33,13 +33,20 @@
         </div>
 
         <nav>
-            <ul class="pagination justify-content-center mt-4" id="pagination-controls"></ul>
+            <ul class="pagination justify-content-center mt-4 js-pagination"></ul>
         </nav>
     </div>
 
+    <footer class="text-center mt-5">
+        <p>View the source code and usage instructions on GitHub:</p>
+        <a href="https://github.com/renangf4/SimplePaginate.js" target="_blank" class="btn btn-dark">
+            🔗 SimplePaginate.js Repository
+        </a>
+    </footer>
+
     <script>
         $(document).ready(function() {
-            generatePagination('.js-pagination', '.js-pagination-item', 6, 'Anterior', 'Próximo');
+            generatePagination('.js-pagination', '.js-pagination-item', 6, 'Previous', 'Next');
         });
     </script>
 </body>
