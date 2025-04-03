@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimplePaginate.js Demo</title>
+    <title>SimplePaginate.js - Demo</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="pagination.js"></script>
-    <style>
-        .js-pagination-item { display: none; }
-        .active { font-weight: bold; }
-    </style>
+    <script src="./pagination.js"></script>
 </head>
 <body>
 
-    <ul class="js-pagination">
-        <li class="js-pagination-item">Item 1</li>
-        <li class="js-pagination-item">Item 2</li>
-        <li class="js-pagination-item">Item 3</li>
-        <li class="js-pagination-item">Item 4</li>
-        <li class="js-pagination-item">Item 5</li>
-        <li class="js-pagination-item">Item 6</li>
-        <li class="js-pagination-item">Item 7</li>
-        <li class="js-pagination-item">Item 8</li>
-        <li class="js-pagination-item">Item 9</li>
-        <li class="js-pagination-item">Item 10</li>
-        <li class="js-pagination-item">Item 11</li>
-        <li class="js-pagination-item">Item 12</li>
-        <li class="js-pagination-item">Item 13</li>
-        <li class="js-pagination-item">Item 14</li>
-        <li class="js-pagination-item">Item 15</li>
-    </ul>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">SimplePaginate.js - Exemplo com Cards</h2>
 
-    <div id="pagination-controls"></div>
+        <div class="row js-pagination">
+            <script>
+                for (let i = 1; i <= 15; i++) {
+                    document.write(`
+                        <div class="col-md-4 mb-4 js-pagination-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Item ${i}</h5>
+                                    <p class="card-text">Este é o conteúdo do item ${i}.</p>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+
+        <nav>
+            <ul class="pagination justify-content-center mt-4" id="pagination-controls"></ul>
+        </nav>
+    </div>
 
     <script>
         $(document).ready(function() {
-            generatePagination('.js-pagination', '.js-pagination-item', 5, 'Prev', 'Next');
+            generatePagination('.js-pagination', '.js-pagination-item', 6, 'Anterior', 'Próximo');
         });
     </script>
 </body>
